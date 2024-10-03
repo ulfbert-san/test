@@ -13,7 +13,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default_layer {            
 // Ulfbert
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  HOME |
@@ -35,16 +35,16 @@
 // Ulfbert
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |       |     |     |  -   | "|"  |  =   |                   |  !   |  &    |  _    |      |       |       |
-// |   `   |  *  |  /  |  {   |  }   |  \   |                   |  ;   |  (    |  )    |   "  |   @   |   ~   |
-// |       |     |     |      |  <   |  >   |    +   |  |   -   | "["  | "]"   |       |      |       |       |
-//                     | GUI  | ALT  | LOWER|  SPACE |  | ENTER | RAISE| BSCP  |       |
+// |       |     |     |  $   | "|"  |  =   |                   |  !   |  &    |  _    |      |       |       |
+// |   `   |  *  |  /  |  {   |  }   |  \   |                   |  ;   |  (    |  )    |  SQ  |   @   |   ~   |
+// | SHIFT |     |     |      |  <   |  >   |    +   |  |   -   | "["  | "]"   |       |      |       | SHIFT |
+//                     | GUI  | ALT  |      |  SPACE |  | ENTER |      | BSCP  |       |
             bindings = <
-&none      &none            &none             &none             &none        &none                            &none     &none     &none     &none     &none     &none 
-&none      &none            &none             &kp MINUS         &kp PIPE     &kp EQUAL                        &kp EXCL  &kp AMPS  &kp UNDER &none     &none     &none 
-&kp GRAVE  &kp ASTRK        &kp FSLH          &kp LBRC          &kp RBRC     &kp BSLH                         &kp SEMI  &kp LPAR  &kp RPAR  &kp DQT   &kp AT    &kp TILDE
-&none      &none            &none             &none             &kp LT       &kp GT      &kp PLUS   &kp MINUS &kp LBKT  &kp RBKT  &none     &none     &none     &none 
-                                              &kp LGUI          &kp LALT     &mo 1       &kp SPACE  &kp RET   &mo 2     &kp BSPC  &none 
+&none     &none    &none    &none    &none    &none                          &none    &none    &none     &none    &none  &none 
+&none     &none    &none    &kp DLLR &kp PIPE &kp EQUAL                      &kp EXCL &kp AMPS &kp UNDER &none    &none  &none 
+&kp GRAVE &kp STAR &kp FSLH &kp LBRC &kp RBRC &kp BSLH                       &kp SEMI &kp LPAR &kp RPAR  &kp APOS &kp AT &kp TILDE
+&trans    &none    &none    &none    &kp LT   &kp GT    &kp PLUS   &kp MINUS &kp LBKT &kp RBKT &none     &none    &none  &trans
+                            &trans   &trans   &none     &trans     &trans    &none    &trans   &none 
             >;
         };
 
@@ -55,13 +55,13 @@
 // |       |     |     |      |      |  %   |                   |  #   |       |       |      |       |       |
 // |   F2  |  F3 |  F6 |  F7  |  F1  |  F5  |                   |      |   <-  |   v   |  ^   |  ->   |       |
 // |   F8  |  F9 |  F10|  F12 |  F4  |  F11 |        |  |       |      |       |       |      |       |       |
-//                     |  GUI |  ALT | LOWER|  SPACE |  | ENTER | RAISE|  BSCP |       |
+//                     |  GUI |  ALT |      |  SPACE |  | ENTER |      |  BSCP |       |
             bindings = <
-&none     &none  &none   &none    &none    &none                        &none     &none    &none     &none    &none     &none 
-&none     &none  &none   &none    &none    &kp PRCNT                    &kp HASH  &none    &none     &none    &none     &none 
-&kp F2    &kp F3 &kp F6  &kp F7   &kp F1   &kp F5                       &none     &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &none 
-&kp F8    &kp F9 &kp F19 &kp F12  &kp F4   &kp F11   &none      &none   &none     &none     &none    &none    &none     &none 
-                         &kp LGUI &kp LALT &mo 1     &kp SPACE  &kp RET &mo 2     &kp BSPC  &none 
+&none  &none  &none   &none    &none    &none                        &none    &none    &none    &none  &none     &none 
+&none  &none  &none   &none    &none    &kp PRCNT                    &kp HASH &none    &none    &none  &none     &none 
+&kp F2 &kp F3 &kp F6  &kp F7   &kp F1   &kp F5                       &none    &kp LEFT &kp DOWN &kp UP &kp RIGHT &none 
+&kp F8 &kp F9 &kp F19 &kp F12  &kp F4   &kp F11   &none      &none   &none    &none    &none    &none  &none     &none 
+                      &kp LGUI &kp LALT &none     &kp SPACE  &kp RET &none    &kp BSPC &none 
             >;
         };
     };
