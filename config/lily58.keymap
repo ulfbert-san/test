@@ -37,13 +37,13 @@
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
 // |       |     |     |  $   | "|"  |  =   |                   |  !   |  &    |  _    |      |       |       |
 // |   `   |  *  |  /  |  {   |  }   |  \   |                   |  ;   |  (    |  )    |  SQ  |   @   |   ~   |
-// | SHIFT |     |     |      |  <   |  >   |    +   |  |   -   | "["  | "]"   |       |      |       | SHIFT |
+// | SHIFT |     |     |EP_TOG|  <   |  >   |    +   |  |   -   | "["  | "]"   |       |      |       | SHIFT |
 //                     | GUI  | ALT  |      |  SPACE |  | ENTER |      | BSCP  |       |
             bindings = <
-&none     &none    &none    &none    &none    &none                        &none    &none    &none     &none    &none  &none 
-&none     &none    &none    &kp DLLR &kp PIPE &kp EQUAL                    &kp EXCL &kp AMPS &kp UNDER &none    &none  &none 
-&kp GRAVE &kp STAR &kp FSLH &kp LBRC &kp RBRC &kp BSLH                     &kp SEMI &kp LPAR &kp RPAR  &kp APOS &kp AT &kp TILDE
-&trans    &none    &none    &none    &kp LT   &kp GT    &kp PLUS &kp MINUS &kp LBKT &kp RBKT &none     &none    &none  &trans
+&none     &none    &none    &none             &none    &none                        &none    &none    &none     &none    &none  &none 
+&none     &none    &none    &kp DLLR          &kp PIPE &kp EQUAL                    &kp EXCL &kp AMPS &kp UNDER &none    &none  &none 
+&kp GRAVE &kp STAR &kp FSLH &kp LBRC          &kp RBRC &kp BSLH                     &kp SEMI &kp LPAR &kp RPAR  &kp APOS &kp AT &kp TILDE
+&trans    &none    &none    &ext_power EP_TOG &kp LT   &kp GT    &kp PLUS &kp MINUS &kp LBKT &kp RBKT &none     &none    &none  &trans
                             &trans   &trans   &trans    &trans   &trans    &trans   &trans   &none 
             >;
         };
